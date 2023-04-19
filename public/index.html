@@ -93,32 +93,46 @@
           </a>
 
           <div class="navbar-collapse collapse">
-            <ul class="navbar-nav navbar-align">
-              <li class="nav-item dropdown">
+            <div class="navbar-nav navbar-align align-items-center gap-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="fs-xs"> Stai visualizzando i dati di </span>
+                <div class="btn-group">
+                  <button class="btn btn-primary btn-sm" type="button">Nome struttura</button>
+                  <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Struttura 1</a></li>
+                    <li><a class="dropdown-item" href="#">Struttura 2</a></li>
+                    <li><a class="dropdown-item" href="#">Struttura 3</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="nav-item dropdown">
                 <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
                   <i class="align-middle" data-feather="settings"></i>
                 </a>
 
                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                  <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Utente</span>
+                  <img src="img/robot.png" class="avatar img-fluid img-thumbnail rounded-full me-1" alt="utente" /> <span class="text-dark">Utente</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
-                  <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
-                  <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                  <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+                  <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="user"></i> Profilo</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Log out</a>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </nav>
         <!-- END NAVBAR -->
         <main class="content">
           <div class="container-fluid p-0">
-            <h1 class="h1 mb-3 text-primary"><strong>Dashboard</strong></h1>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h1 class="h1 mb-3 text-primary"><strong>Dashboard</strong></h1>
+              <button type="button" title="Filtra" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-filter"></i></button>
+            </div>
             <div class="row">
               <div class="col-12">
                 <div class="alert alert-warning alert-dismissible" role="alert">
@@ -261,75 +275,91 @@
                   <div class="card-header">
                     <h5 class="card-title mb-0 text-primary">Attività odierne in esecuzione</h5>
                   </div>
-                  <table class="table table-hover my-0">
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th class="d-none d-xl-table-cell">Start Date</th>
-                        <th class="d-none d-xl-table-cell">End Date</th>
-                        <th>Status</th>
-                        <th class="d-none d-md-table-cell">Assignee</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Project Apollo</td>
-                        <td class="d-none d-xl-table-cell">01/01/2021</td>
-                        <td class="d-none d-xl-table-cell">31/06/2021</td>
-                        <td><span class="badge bg-success">Done</span></td>
-                        <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                      </tr>
-                      <tr>
-                        <td>Project Fireball</td>
-                        <td class="d-none d-xl-table-cell">01/01/2021</td>
-                        <td class="d-none d-xl-table-cell">31/06/2021</td>
-                        <td><span class="badge bg-danger">Cancelled</span></td>
-                        <td class="d-none d-md-table-cell">William Harris</td>
-                      </tr>
-                      <tr>
-                        <td>Project Hades</td>
-                        <td class="d-none d-xl-table-cell">01/01/2021</td>
-                        <td class="d-none d-xl-table-cell">31/06/2021</td>
-                        <td><span class="badge bg-success">Done</span></td>
-                        <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                      </tr>
-                      <tr>
-                        <td>Project Nitro</td>
-                        <td class="d-none d-xl-table-cell">01/01/2021</td>
-                        <td class="d-none d-xl-table-cell">31/06/2021</td>
-                        <td><span class="badge bg-warning">In progress</span></td>
-                        <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                      </tr>
-                      <tr>
-                        <td>Project Phoenix</td>
-                        <td class="d-none d-xl-table-cell">01/01/2021</td>
-                        <td class="d-none d-xl-table-cell">31/06/2021</td>
-                        <td><span class="badge bg-success">Done</span></td>
-                        <td class="d-none d-md-table-cell">William Harris</td>
-                      </tr>
-                      <tr>
-                        <td>Project X</td>
-                        <td class="d-none d-xl-table-cell">01/01/2021</td>
-                        <td class="d-none d-xl-table-cell">31/06/2021</td>
-                        <td><span class="badge bg-success">Done</span></td>
-                        <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                      </tr>
-                      <tr>
-                        <td>Project Romeo</td>
-                        <td class="d-none d-xl-table-cell">01/01/2021</td>
-                        <td class="d-none d-xl-table-cell">31/06/2021</td>
-                        <td><span class="badge bg-success">Done</span></td>
-                        <td class="d-none d-md-table-cell">Christina Mason</td>
-                      </tr>
-                      <tr>
-                        <td>Project Wombat</td>
-                        <td class="d-none d-xl-table-cell">01/01/2021</td>
-                        <td class="d-none d-xl-table-cell">31/06/2021</td>
-                        <td><span class="badge bg-warning">In progress</span></td>
-                        <td class="d-none d-md-table-cell">William Harris</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="card-body">
+                    <div class="mb-4">
+                      <span class="text-muted">Non ci sono attività in esecuzione</span>
+                    </div>
+                    <button type="button" class="btn btn-primary">Avvia nuova attività</button>
+                    <div class="w-100 mb-4 mt-4"></div>
+                    <div class="mb-4">
+                      <h5 class="card-title mb-0 text-primary">Attività odierne in esecuzione</h5>
+                      <table class="table table-borderless mt-3">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="mb-1 text-primary">Attività di trasporto e deposito analisi Hermes</div>
+                              <div><small class="text-muted">17:00 - 19:00</small></div>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-4 align-items-center">
+                                <div class="d-flex flex-column">
+                                  <div class="text-muted">Mario Robot - Laboratorio 123</div>
+                                  <div class="text-muted">Mario Robot - Laboratorio 123</div>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center">
+                                  <div class="robot-avatar small primary">
+                                    <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                                  </div>
+                                  <div class="robot-avatar small primary">
+                                    <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <button class="btn btn-primary" type="button" title="Dettagli">Dettagli</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="mb-1 text-primary">Attività di trasporto e deposito analisi Hermes</div>
+                              <div><small class="text-muted">17:00 - 19:00</small></div>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-4 align-items-center">
+                                <div class="d-flex flex-column">
+                                  <div class="text-muted">Mario Robot - Laboratorio 123</div>
+                                  <div class="text-muted">Mario Robot - Laboratorio 123</div>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center">
+                                  <div class="robot-avatar small primary">
+                                    <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                                  </div>
+                                  <div class="robot-avatar small primary">
+                                    <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <button class="btn btn-primary" type="button" title="Dettagli">Dettagli</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="mb-1 text-primary">Attività di trasporto e deposito analisi Hermes</div>
+                              <div><small class="text-muted">17:00 - 19:00</small></div>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-4 align-items-center">
+                                <div class="d-flex flex-column">
+                                  <div class="text-muted">Mario Robot - Laboratorio 123</div>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center">
+                                  <div class="robot-avatar small primary">
+                                    <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <button class="btn btn-primary" type="button" title="Dettagli">Dettagli</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

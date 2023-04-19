@@ -90,11 +90,18 @@
     width: 55px;
     height: 55px;
     border: 2px solid $gray-400;
+    &.small {
+      width: 35px;
+      height: 35px;
+    }
     &.success {
       border: 2px solid $success;
     }
     &.danger {
       border: 2px solid $danger;
+    }
+    &.primary {
+      border: 2px solid $primary;
     }
     & > img {
       width: 100%;
@@ -121,4 +128,7 @@
     color: $white;
     font-size: $font-size-sm;
   }
+}
+.rounded-full {
+  border-radius: 100%;
 }
