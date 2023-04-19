@@ -58,9 +58,12 @@
 @import "3-components/tables";
 @import "3-components/type";
 @import "3-components/wrapper";
+@import "3-components/alerts";
+@import "3-components/custom";
 
-// Theme utilities
+// Theme utilities;
 @import "4-utilities/cursors";
+@import "4-utilities/typography";
 
 // 3rd party plugins
 @import "~jsvectormap/dist/css/jsvectormap";
@@ -70,3 +73,7 @@
 // 3rd party plugin styles
 @import "5-vendor/flatpickr";
 @import "5-vendor/simplebar";
+
+@import "6-fontawesome/fontawesome.scss";
+@import "6-fontawesome/solid.scss";
+@import "6-fontawesome/brands.scss";

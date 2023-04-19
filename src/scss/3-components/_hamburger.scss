@@ -5,9 +5,9 @@
   border-radius: 1px;
   height: 3px;
   width: $hamburger-width-middle;
-  background: $gray-700;
+  background: $primary;
   display: block;
-  content: '';
+  content: "";
   transition: $transition-appearance-fast;
 }
 

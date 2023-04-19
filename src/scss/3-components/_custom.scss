@@ -1,0 +1,124 @@
+.robotstatus {
+  margin-bottom: $grid-gutter-width;
+  box-shadow: $card-shadow;
+  border-radius: $card-border-radius;
+  padding: 15px 20px;
+  background: $dark-blue;
+  position: relative;
+  &-header {
+    border-bottom-width: 1px;
+  }
+  &-title {
+    font-size: $card-title-font-size;
+    font-weight: $card-title-font-weight;
+    color: $white;
+  }
+  &-action {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    & > a {
+      border: 1px solid $dark-blue;
+      box-shadow: 0px 0px 1px $primary;
+      border-radius: 100%;
+      background: $white;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+    & > a > i {
+      color: $dark-blue;
+    }
+    & > a > span {
+      display: none;
+    }
+    @include media-breakpoint-down(md) {
+      top: 98%;
+      left: 0;
+      right: 0;
+      bottom: 2%;
+      width: 100%;
+      transform: translate(0, 0);
+      & > a {
+        border: 1px solid $dark-blue;
+        box-shadow: 0px 0px 1px $primary;
+        border-radius: 6px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        background: $white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        z-index: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+        padding: 20px;
+      }
+      & > a > i {
+        color: $dark-blue;
+      }
+      & > a > span {
+        display: block;
+      }
+    }
+  }
+}
+
+.robotslist {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+}
+.robot {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  max-height: 65px;
+  &-avatar {
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    border: 2px solid $gray-400;
+    &.success {
+      border: 2px solid $success;
+    }
+    &.danger {
+      border: 2px solid $danger;
+    }
+    & > img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      background: $white;
+      border-radius: 100%;
+    }
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  &-title {
+    color: $gray-400;
+    font-size: $font-size-sm;
+  }
+  &-name {
+    color: $white;
+    font-size: $font-size-sm;
+  }
+  &-location {
+    color: $white;
+    font-size: $font-size-sm;
+  }
+}
