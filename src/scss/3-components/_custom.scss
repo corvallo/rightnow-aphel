@@ -132,3 +132,17 @@
 .rounded-full {
   border-radius: 100%;
 }
+
+.navbar-fixed {
+  width: calc(100% - $sidebar-width);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.wrapper > .sidebar.collapsed + .main > .navbar-fixed {
+  width: 100%;
+}
+.content {
+  margin-top: 65px;
+}
