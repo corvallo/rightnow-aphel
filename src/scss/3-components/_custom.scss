@@ -138,11 +138,125 @@
   position: fixed;
   top: 0;
   z-index: 9999;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
 }
 
 .wrapper > .sidebar.collapsed + .main > .navbar-fixed {
   width: 100%;
+  @include media-breakpoint-down(lg) {
+    width: calc(100% - $sidebar-width);
+  }
 }
 .content {
   margin-top: 65px;
+}
+
+.icon-btn {
+  padding: 0;
+  font-size: 1.3rem;
+  border-color: transparent !important;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  & input[type="checkbox"] {
+    display: none;
+  }
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 2px #ccc;
+    transition: background-color 0.3s ease-in-out;
+  }
+  &-handle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #aaa;
+    text-shadow: 1px 1px #fff;
+    transition: color 0.3s ease-in-out;
+  }
+
+  & input[type="checkbox"]:checked + &-handle {
+    transform: translateX(45px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 3px $success;
+  }
+  & input[type="checkbox"]:checked + &-background {
+    background-color: $success;
+    box-shadow: inset 0 0 0 2px $success;
+  }
+
+  & input[type="checkbox"]:checked + &:before {
+    content: "On";
+    color: $success;
+    right: -20px;
+  }
+  & input[type="checkbox"]:checked + &-background &-handle {
+    transform: translateX(25px);
+  }
+
+  & input[type="checkbox"]:not(:checked) + &-handle {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 3px $danger;
+  }
+  & input[type="checkbox"]:not(:checked) + &-background {
+    background-color: $danger;
+    box-shadow: inset 0 0 0 2px $danger;
+  }
+
+  & input[type="checkbox"]:not(:checked) + &:before {
+    content: "On";
+    color: $danger;
+    right: -15px;
+  }
+}
+.dataTables_paginate .paginate_button {
+  background: transparent !important;
+  &:hover {
+    border-color: $primary !important;
+    border-radius: 0.2rem !important;
+    color: $primary !important;
+  }
+}
+body {
+  table-layout: fixed;
+}
+.page-utilities {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+  & > .page-utility {
+    flex: 0.25;
+    @include media-breakpoint-down(md) {
+      flex: 1;
+    }
+  }
 }

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Aphel Dashboard" />
+    <meta name="author" content="RightNow" />
+    <meta name="keywords" content="" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <title>Utenti | Aphel Dashboard</title>
+
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- SIDENAV-->
+      <nav id="sidebar" class="sidebar js-sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="index.html">
+            <span class="align-middle">
+              <img src="./img/logo_white.svg" />
+            </span>
+          </a>
+
+          <ul class="sidebar-nav">
+            <li class="sidebar-item active">
+              <a class="sidebar-link" href="index.html">
+                <i class="fa-regular fa-home"></i>
+                <span class="align-middle">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="activities.html">
+                <i class="fa-regular fa-clipboard-list"></i>
+                <span class="align-middle">Attività</span>
+                <span class="sidebar-badge badge">5</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="robots.html">
+                <i class="fa-regular fa-robot"></i>
+                <span class="align-middle">Robot</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#apps" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                <i class="fa-regular fa-clone"></i>
+                <span class="align-middle">Applicazioni</span>
+              </a>
+              <ul id="apps" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="">
+                <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 1</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 2</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 3</a></li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="locations.html">
+                <i class="fa-regular fa-location-dot"></i>
+                <span class="align-middle">Strutture</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="users.html">
+                <i class="fa-regular fa-user"></i>
+                <span class="align-middle">Utenti</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- END SIDENAV-->
+      <!-- MAIN -->
+      <div class="main">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand navbar-light navbar-bg navbar-fixed">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+
+          <div class="navbar-collapse collapse">
+            <div class="navbar-nav navbar-align align-items-center gap-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="fs-xs"> Stai visualizzando i dati di </span>
+                <div class="btn-group">
+                  <button class="btn btn-primary btn-sm" type="button">Nome struttura</button>
+                  <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Struttura 1</a></li>
+                    <li><a class="dropdown-item" href="#">Struttura 2</a></li>
+                    <li><a class="dropdown-item" href="#">Struttura 3</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="nav-item dropdown">
+                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                  <i class="align-middle" data-feather="settings"></i>
+                </a>
+
+                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                  <img src="img/robot.png" class="avatar img-fluid img-thumbnail rounded-full me-1" alt="utente" /> <span class="text-dark">Utente</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="user"></i> Profilo</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- END NAVBAR -->
+        <main class="content">
+          <div class="container-fluid p-0">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h1 class="h1 mb-3 text-primary"><strong>Utenti</strong></h1>
+              <button id="add-user" type="button" class="btn btn-primary btn-small d-flex gap-2 align-items-center" title="Nuovo utente">
+                Aggiungi nuovo <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+
+            <div class="row">
+              <div class="col-12 d-flex">
+                <div class="card flex-fill">
+                  <div class="card-body">
+                    <div class="page-utilities">
+                      <div class="page-utility">
+                        <input type="text" class="form-control" id="search" placeholder="Cerca..." />
+                      </div>
+                      <div class="page-utility">
+                        <select class="form-select" aria-label="Utenti" data-trigger name="choices-users" id="choices-users">
+                          <option selected>Tutti gli utenti</option>
+                          <option value="1">Utente 1</option>
+                          <option value="2">Utente 2</option>
+                          <option value="3">Utente 3</option>
+                        </select>
+                      </div>
+                      <div class="page-utility">
+                        <select class="form-select" aria-label="Laboratori" data-trigger name="choices-labs" id="choices-labs">
+                          <option selected>Tutti i laboratori</option>
+                          <option value="1">Laboratorio 1</option>
+                          <option value="2">Laboratorio 2</option>
+                          <option value="3">Laboratorio 3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 d-flex">
+                <div class="card flex-fill">
+                  <div class="card-body">
+                    <div class="mb-4">
+                      <div class="row">
+                        <div class="table-responsive">
+                          <table id="users" class="display" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                <th>Cognome</th>
+                                <th>Nome</th>
+                                <th>Titolo</th>
+                                <th>Email</th>
+                                <th>Ruolo</th>
+                                <th>Telefono</th>
+                                <th>Struttura</th>
+                                <th>Laboratorio</th>
+                                <th>Azioni</th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- END MAIN -->
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

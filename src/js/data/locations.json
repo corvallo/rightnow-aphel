@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "nome": "Giovanni XIII",
+            "citta": "Bari",
+            "responsabili": "Prof.ssa Simona Simonetti, Dott. Fabio Viganò",
+            "laboratori": "Screening neonatale, Patologia clinica",
+            "robot": "2"
+        }
+    ]
+}

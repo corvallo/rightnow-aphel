@@ -1,0 +1,133 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "attività": {
+                "nome": "Attività di trasporto e deposito analisi Hermes",
+                "giorni": [
+                    {
+                        "LU": false
+                    },
+                    {
+                        "MA": true
+                    },
+                    {
+                        "ME": true
+                    },
+                    {
+                        "GI": false
+                    },
+                    {
+                        "VE": true
+                    },
+                    {
+                        "SA": false
+                    },
+                    {
+                        "DO": false
+                    }
+                ],
+                "orari": "Orari variabili"
+            },
+            "esecuzione": "OGGI 17:00 - 19:00",
+            "robot": [
+                {
+                    "nome": "Mario Robot",
+                    "laboratorio": "Laboratorio 123",
+                    "img": "img/robot.png"
+                },
+                {
+                    "nome": "Andrea Robot",
+                    "laboratorio": "Laboratorio 123",
+                    "img": "img/robot.png"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "attività": {
+                "nome": "Attività di trasporto e deposito analisi Hermes",
+                "giorni": [
+                    {
+                        "LU": false
+                    },
+                    {
+                        "MA": true
+                    },
+                    {
+                        "ME": true
+                    },
+                    {
+                        "GI": false
+                    },
+                    {
+                        "VE": true
+                    },
+                    {
+                        "SA": false
+                    },
+                    {
+                        "DO": false
+                    }
+                ],
+                "orari": "17:00 - 19:00"
+            },
+            "esecuzione": "OGGI 17:00 - 19:00",
+            "robot": [
+                {
+                    "nome": "Mario Robot",
+                    "laboratorio": "Laboratorio 123",
+                    "img": "img/robot.png"
+                },
+                {
+                    "nome": "Andrea Robot",
+                    "laboratorio": "Laboratorio 123",
+                    "img": "img/robot.png"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "attività": {
+                "nome": "Attività di trasporto e deposito analisi Hermes",
+                "giorni": [
+                    {
+                        "LU": false
+                    },
+                    {
+                        "MA": true
+                    },
+                    {
+                        "ME": true
+                    },
+                    {
+                        "GI": false
+                    },
+                    {
+                        "VE": true
+                    },
+                    {
+                        "SA": false
+                    },
+                    {
+                        "DO": false
+                    }
+                ],
+                "orari": "17:00 - 19:00"
+            },
+            "esecuzione": "DOMANI 17:00 - 19:00",
+            "robot": [
+                {
+                    "nome": "Mario Robot",
+                    "laboratorio": "Laboratorio 123",
+                    "img": "img/robot.png"
+                },
+                {
+                    "nome": "Andrea Robot",
+                    "laboratorio": "Laboratorio 123",
+                    "img": "img/robot.png"
+                }
+            ]
+        }
+    ]
+}

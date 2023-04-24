@@ -8,10 +8,10 @@
     <meta name="author" content="RightNow" />
     <meta name="keywords" content="" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
-
-    <link rel="canonical" href="https://demo-basic.adminkit.io/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
 
     <title>Aphel Dashboard</title>
 
@@ -61,9 +61,18 @@
                 <i class="fa-regular fa-clone"></i>
                 <span class="align-middle">Applicazioni</span>
               </a>
-              <ul id="apps" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="">
+              <ul id="apps" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 1</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 2</a></li>
+                <li class="sidebar-item">
+                  <a href="#subapps" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                    <span class="align-middle">Applicazioni</span>
+                  </a>
+                  <ul id="subapps" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#apps">
+                    <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 1</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 2</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 3</a></li>
+                  </ul>
+                </li>
                 <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 3</a></li>
               </ul>
             </li>
@@ -167,7 +176,7 @@
                             </div>
                             <div class="col-lg-4 col-md-12">
                               <div class="d-flex flex-column">
-                                <span class="text-black-50"><strong>19</strong></span>
+                                <span class="text-danger"><strong>19</strong></span>
                                 <span class="text-muted fs-6">Strappi falliti</span>
                               </div>
                             </div>
@@ -258,9 +267,6 @@
                               <div class="robot-location">Laboratorio xyz</div>
                             </div>
                           </div>
-                        </div>
-                        <div class="robotstatus-action">
-                          <a href="robots.html"><i class="fa-solid fa-chevron-right"></i> <span>Stato robots</span></a>
                         </div>
                       </div>
                     </div>
