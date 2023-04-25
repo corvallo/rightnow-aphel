@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
 
-    <title>Strutture | Aphel Dashboard</title>
+    <title>Screening | Aphel Dashboard</title>
 
     <link href="css/app.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -131,26 +131,33 @@
         <main class="content">
           <div class="container-fluid p-0">
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <h1 class="h1 mb-3 text-primary"><strong>Strutture</strong></h1>
-              <button id="add-location" type="button" class="btn btn-primary btn-small d-flex gap-2 align-items-center" title="Nuova struttura">
-                Aggiungi nuova <i class="fa-solid fa-plus"></i>
-              </button>
+              <h1 class="h1 mb-3 text-primary"><strong>Screening</strong></h1>
             </div>
+
             <div class="row">
               <div class="col-12 d-flex">
                 <div class="card flex-fill">
                   <div class="card-body">
                     <div class="page-utilities">
                       <div class="page-utility">
-                        <input type="text" class="form-control" id="search" placeholder="Cerca..." />
+                        <input type="text" class="form-control" id="search" placeholder="Seriale o progressivo..." />
                       </div>
-
+                      <div class="page-utility small">
+                        <div class="date-control">
+                          <input class="form-control" placeholder="Dal" id="date-from" />
+                        </div>
+                      </div>
+                      <div class="page-utility small">
+                        <div class="date-control">
+                          <input class="form-control" placeholder="Al" id="date-to" />
+                        </div>
+                      </div>
                       <div class="page-utility">
-                        <select class="form-select" aria-label="Strutture" data-trigger name="choices-locations" id="choices-locations">
-                          <option selected>Tutti le strutture</option>
-                          <option value="1">Struttura 1</option>
-                          <option value="2">Struttura 2</option>
-                          <option value="3">Struttura 3</option>
+                        <select class="form-select" aria-label="Laboratori" data-trigger name="choices-labs" id="choices-labs">
+                          <option selected>Tutti i laboratori</option>
+                          <option value="1">Laboratorio 1</option>
+                          <option value="2">Laboratorio 2</option>
+                          <option value="3">Laboratorio 3</option>
                         </select>
                       </div>
                     </div>
@@ -158,22 +165,36 @@
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="col-12 d-flex">
                 <div class="card flex-fill">
                   <div class="card-body">
                     <div class="mb-4">
                       <div class="row">
+                        <div class="d-flex gap-3 mb-3">
+                          <button type="button" id="filter-all" class="btn btn-secondary btn-sm rounded-2">Tutti</button>
+                          <button type="button" id="filter-unknow" class="btn btn-warning btn-sm rounded-2">Seriali sconosciuti</button>
+                          <button type="button" id="filter-failed" class="btn btn-danger btn-sm rounded-2">Stampe fallite</button>
+                          <button type="button" id="filter-lis" class="btn btn-primary btn-sm rounded-2">Da inviare a LIS</button>
+                          <button type="button" id="filter-checkin" class="btn btn-primary btn-sm rounded-2">Check-in completi</button>
+                          <button type="button" id="filter-completed" class="btn btn-primary btn-sm rounded-2">Strappi completi</button>
+                        </div>
+                      </div>
+                      <div class="row">
                         <div class="table-responsive">
-                          <table class="table mt-3" id="locations">
+                          <table id="screening" class="display" cellspacing="0" width="100%">
                             <thead>
                               <tr>
-                                <th>Nome</th>
-                                <th>Città</th>
-                                <th>Responsabili</th>
-                                <th>Laboratori</th>
-                                <th>Robot</th>
-                                <th>Azioni</th>
+                                <th>Scansione</th>
+                                <th>Seriale</th>
+                                <th>Seriale Unknow</th>
+                                <th>Stampa Failed</th>
+                                <th>Progressivo laboratorio</th>
+                                <th>Check-in</th>
+                                <th>Strappo</th>
+                                <th>Attività</th>
+                                <th>Invio a LIS</th>
                               </tr>
                             </thead>
                             <tbody></tbody>

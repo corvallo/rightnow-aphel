@@ -11,3 +11,4 @@ import "./modules/flatpickr";
 import "./users";
 import "./locations";
 import "./activities";
+import "./screening";

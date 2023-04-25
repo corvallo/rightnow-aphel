@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
 
-    <title>Attività | Aphel Dashboard</title>
+    <title>Robot | Aphel Dashboard</title>
 
     <link href="css/app.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -131,10 +131,7 @@
         <main class="content">
           <div class="container-fluid p-0">
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <h1 class="h1 mb-3 text-primary"><strong>Attività</strong></h1>
-              <button id="add-activity" type="button" class="btn btn-primary btn-small d-flex gap-2 align-items-center" title="Nuova struttura">
-                Aggiungi nuova <i class="fa-solid fa-plus"></i>
-              </button>
+              <h1 class="h1 mb-3 text-primary"><strong>Robot</strong></h1>
             </div>
             <div class="row">
               <div class="col-12 d-flex">
@@ -154,11 +151,10 @@
                         </select>
                       </div>
                       <div class="page-utility">
-                        <select class="form-select" aria-label="Laboratori" data-trigger name="choices-labs" id="choices-labs">
-                          <option selected>Tutti i laboratori</option>
-                          <option value="1">Laboratorio 1</option>
-                          <option value="2">Laboratorio 2</option>
-                          <option value="3">Laboratorio 3</option>
+                        <select class="form-select" aria-label="Robot attivi" data-trigger name="choices-active" id="choices-active">
+                          <option selected>Attivi e inattivi</option>
+                          <option value="1">Attivi</option>
+                          <option value="2">Inattivi</option>
                         </select>
                       </div>
                     </div>
@@ -168,22 +164,126 @@
             </div>
             <div class="row">
               <div class="col-12 d-flex">
-                <div class="card flex-fill">
-                  <div class="card-body">
-                    <div class="mb-4">
-                      <div class="row">
-                        <div class="table-responsive">
-                          <table class="table mt-3" id="activities">
-                            <thead>
-                              <tr>
-                                <th>Attività</th>
-                                <th>Esecuzione</th>
-                                <th>Robot</th>
-                                <th>Azioni</th>
-                              </tr>
-                            </thead>
-                            <tbody></tbody>
-                          </table>
+                <div class="w-100 mb-4 mt-4">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="robotstatus light">
+                        <div class="robotstatus-header">
+                          <h5 class="robotstatus-title mb-4">Laboratorio analisi</h5>
+                        </div>
+                        <div class="robotslist mb-1 mt-2">
+                          <div class="robot">
+                            <div class="robot-avatar success">
+                              <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                            </div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                          <div class="robot">
+                            <div class="robot-avatar danger"><img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" /></div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                          <div class="robot">
+                            <div class="robot-avatar success"><img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" /></div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex">
+                <div class="w-100 mb-4 mt-4">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="robotstatus light">
+                        <div class="robotstatus-header">
+                          <h5 class="robotstatus-title mb-4">Laboratorio secondario</h5>
+                        </div>
+                        <div class="robotslist mb-1 mt-2">
+                          <div class="robot">
+                            <div class="robot-avatar success">
+                              <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                            </div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                          <div class="robot">
+                            <div class="robot-avatar danger"><img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" /></div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                          <div class="robot">
+                            <div class="robot-avatar success"><img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" /></div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex">
+                <div class="w-100 mb-4 mt-4">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="robotstatus light">
+                        <div class="robotstatus-header">
+                          <h5 class="robotstatus-title mb-4">Laboratorio stoccaggio</h5>
+                        </div>
+                        <div class="robotslist mb-1 mt-2">
+                          <div class="robot">
+                            <div class="robot-avatar success">
+                              <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                            </div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                          <div class="robot">
+                            <div class="robot-avatar danger"><img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" /></div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                          <div class="robot">
+                            <div class="robot-avatar success"><img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" /></div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

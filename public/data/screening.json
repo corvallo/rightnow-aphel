@@ -1,0 +1,76 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "scansione": "24/04/2023",
+            "seriale": "3242314355435",
+            "progressivo": "1437921",
+            "checkin": "24/04/2023 - 11:23:12",
+            "strappo": "24/04/2023 - 11:23:12",
+            "attività": "Check-in con trasporto manuale",
+            "lis": true,
+            "seriale_unknow": true,
+            "stampa_failed": false
+        },
+        {
+            "id": 2,
+            "scansione": "24/04/2023",
+            "seriale": "3242314355435",
+            "progressivo": "1437921",
+            "checkin": "24/04/2023 - 11:23:12",
+            "strappo": "24/04/2023 - 11:23:12",
+            "attività": "Check-in con trasporto manuale",
+            "lis": true,
+            "seriale_unknow": false,
+            "stampa_failed": false
+        },
+        {
+            "id": 3,
+            "scansione": "24/04/2023",
+            "seriale": "3242314355435",
+            "progressivo": "1437921",
+            "checkin": "24/04/2023 - 11:23:12",
+            "strappo": "24/04/2023 - 11:23:12",
+            "attività": "Check-in con trasporto manuale",
+            "lis": false,
+            "seriale_unknow": false,
+            "stampa_failed": true
+        },
+        {
+            "id": 4,
+            "scansione": "24/04/2023",
+            "seriale": "3242314355435",
+            "progressivo": "1437921",
+            "checkin": "24/04/2023 - 11:23:12",
+            "strappo": "24/04/2023 - 11:23:12",
+            "attività": "Check-in con trasporto manuale",
+            "lis": false,
+            "seriale_unknow": false,
+            "stampa_failed": false
+        },
+        {
+            "id": 5,
+            "scansione": "24/04/2023",
+            "seriale": "3242314355435",
+            "progressivo": "1437921",
+            "checkin": "24/04/2023 - 11:23:12",
+            "strappo": "24/04/2023 - 11:23:12",
+            "attività": "Check-in con trasporto manuale",
+            "lis": false,
+            "seriale_unknow": false,
+            "stampa_failed": false
+        },
+        {
+            "id": 6,
+            "scansione": "24/04/2023",
+            "seriale": "3242314355435",
+            "progressivo": "1437921",
+            "checkin": "24/04/2023 - 11:23:12",
+            "strappo": "24/04/2023 - 11:23:12",
+            "attività": "Check-in con trasporto manuale",
+            "lis": true,
+            "seriale_unknow": false,
+            "stampa_failed": false
+        }
+    ]
+}

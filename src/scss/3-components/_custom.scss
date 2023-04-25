@@ -5,6 +5,17 @@
   padding: 15px 20px;
   background: $dark-blue;
   position: relative;
+  &.light {
+    background: $white;
+    & .robot .robot-title,
+    & .robot .robot-name,
+    & .robot .robot-location {
+      color: $primary;
+    }
+  }
+  &.light &-title {
+    color: $primary;
+  }
   &-header {
     border-bottom-width: 1px;
   }
@@ -255,8 +266,32 @@ body {
   }
   & > .page-utility {
     flex: 0.25;
+    &.small {
+      flex: 0.1;
+    }
     @include media-breakpoint-down(md) {
       flex: 1;
     }
   }
+}
+
+.date-control {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "\f133";
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    bottom: 50%;
+    font-family: "Font Awesome 6 Free";
+    right: 0.1rem;
+    transform: translate(-50%, -50%);
+  }
+}
+.warningRow {
+  background: rgba($warning, 0.4) !important;
+}
+.dangerRow {
+  background: rgba($danger, 0.4) !important;
 }
