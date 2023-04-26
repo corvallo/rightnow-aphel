@@ -307,3 +307,11 @@ body {
     flex-direction: column;
   }
 }
+
+.card-dark {
+  background: $dark-blue;
+  color: $white !important;
+  & .card-body {
+    color: $white !important;
+  }
+}

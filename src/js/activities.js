@@ -7,7 +7,6 @@ window.$ = $;
 $(document).ready(() => {
   new Choices("#choices-types", { itemSelectText: "" });
   new Choices("#choices-labs", { itemSelectText: "" });
-  $("#activities-widget").DataTable({ responsive: true });
   $("#activities").DataTable({
     responsive: true,
     ajax: "./data/activities.json",
