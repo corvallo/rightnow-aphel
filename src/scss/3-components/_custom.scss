@@ -149,8 +149,8 @@
   position: fixed;
   top: 0;
   z-index: 9999;
-  @include media-breakpoint-down(md) {
-    width: 100%;
+  @include media-breakpoint-down(lg) {
+    width: 100vw;
   }
 }
 
