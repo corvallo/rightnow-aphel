@@ -1,5 +1,6 @@
 import $ from "jquery";
-import DataTable from "datatables.net-bs5";
+// import DataTable from "datatables.net-bs5";
+import DataTables from "datatables.net-responsive";
 import Choices from "choices.js";
 
 window.$ = $;
@@ -22,6 +23,7 @@ $(document).ready(() => {
         previous: "Pagina precedente",
       },
     },
+
     columns: [
       { data: "cognome" },
       { data: "nome" },

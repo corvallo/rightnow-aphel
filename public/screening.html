@@ -23,6 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -128,7 +129,7 @@
           </div>
         </nav>
         <!-- END NAVBAR -->
-        <main class="content">
+        <main class="content content-fixed"">
           <div class="container-fluid p-0">
             <div class="d-flex justify-content-between align-items-center mb-2">
               <h1 class="h1 mb-3 text-primary"><strong>Screening</strong></h1>
@@ -172,7 +173,7 @@
                   <div class="card-body">
                     <div class="mb-4">
                       <div class="row">
-                        <div class="d-flex gap-3 mb-3">
+                        <div class="d-flex gap-3 mb-3 filter-buttons">
                           <button type="button" id="filter-all" class="btn btn-secondary btn-sm rounded-2">Tutti</button>
                           <button type="button" id="filter-unknow" class="btn btn-warning btn-sm rounded-2">Seriali sconosciuti</button>
                           <button type="button" id="filter-failed" class="btn btn-danger btn-sm rounded-2">Stampe fallite</button>

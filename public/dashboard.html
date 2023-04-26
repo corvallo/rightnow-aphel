@@ -22,6 +22,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -136,7 +138,7 @@
           </div>
         </nav>
         <!-- END NAVBAR -->
-        <main class="content">
+        <main class="content content-fixed"">
           <div class="container-fluid p-0">
             <div class="d-flex justify-content-between align-items-center mb-2">
               <h1 class="h1 mb-3 text-primary"><strong>Dashboard</strong></h1>
@@ -289,9 +291,17 @@
                     <div class="w-100 mb-4 mt-4"></div>
                     <div class="mb-4">
                       <h5 class="card-title mb-0 text-primary">Attività odierne in esecuzione</h5>
-                      <table class="table table-borderless mt-3">
-                        <tbody>
+                      <div class="table-responsive mt-3">
+                      <table class="table table-borderless display responsive nowrap" cellspacing="0" width="100%" id="activities-widget"  >
+                        <thead>
                           <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr >
                             <td>
                               <div class="mb-1 text-primary">Attività di trasporto e deposito analisi Hermes</div>
                               <div><small class="text-muted">17:00 - 19:00</small></div>
@@ -364,6 +374,7 @@
                           </tr>
                         </tbody>
                       </table>
+                     </div>
                     </div>
                   </div>
                 </div>

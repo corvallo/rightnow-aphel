@@ -160,7 +160,8 @@
     width: calc(100% - $sidebar-width);
   }
 }
-.content {
+
+.content-fixed {
   margin-top: 65px;
 }
 
@@ -297,4 +298,12 @@ body {
 }
 .choices {
   width: inherit;
+}
+.dataTables_filter {
+  display: none;
+}
+.filter-buttons {
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
 }
