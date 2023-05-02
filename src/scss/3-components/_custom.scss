@@ -265,6 +265,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  align-items: center;
   @include media-breakpoint-down(md) {
     flex-direction: column;
   }
@@ -301,6 +302,7 @@ body {
 }
 .choices {
   width: inherit;
+  margin-bottom: 0;
 }
 .dataTables_filter {
   display: none;
@@ -329,6 +331,9 @@ body {
   }
   &.failed {
     background: $danger;
+  }
+  &.warning {
+    background: $warning;
   }
 }
 .badge-btn {
