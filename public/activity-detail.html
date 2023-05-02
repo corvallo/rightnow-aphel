@@ -199,7 +199,7 @@
                     <h4 class="text-light">Controlli attività</h4>
                     <div class="d-flex mt-4 flex-column gap-3">
                       <div class="d-flex gap-5 align-items-center">
-                        <div class="text-light"><span>Abilitato</span></div>
+                        <div class="text-light"><span>Non attivo</span></div>
                         <div class="flex-grow-1">
                           <label class="toggle-switch">
                             <input type="checkbox" />
@@ -210,11 +210,8 @@
                         </div>
                       </div>
                       <div class="d-flex gap-5 align-items-center">
-                        <div class="text-light"><span>Password</span></div>
                         <div class="flex-grow-1">
-                          <button class="btn btn-sm btn-light text-primary d-flex gap-2 align-items-center rounded-3">
-                            Reset password <i class="fa fa-rotate-right"></i>
-                          </button>
+                          <button class="btn btn-sm btn-light text-primary d-flex gap-2 align-items-center rounded-3" title="Salva">Salva</button>
                         </div>
                       </div>
                     </div>
@@ -222,7 +219,146 @@
                 </div>
               </div>
             </div>
-            <div class="row"></div>
+            <div class="row">
+              <div class="col-12 d-flex">
+                <div class="card flex-fill">
+                  <div class="card-body">
+                    <h4 class="text-primary fw-bold">Programmazione attività</h4>
+                    <div class="mt-4">
+                      <div class="row" id="activity-schedule">
+                        <div class="schedule mb-2" data-index="0">
+                          <div class="schedule-box">
+                            <span class="schedule-box-title">Giorni</span>
+                            <div class="schedule-box-content schedule-days">
+                              <button type="button" title="LU" class="d-flex align-items-center badge-btn badge bg-primary">LU</button>
+                              <button type="button" title="MA" class="d-flex align-items-center badge-btn badge bg-darkblue">MA</button>
+                              <button type="button" title="ME" class="d-flex align-items-center badge-btn badge bg-secondary">ME</button>
+                              <button type="button" title="GI" class="d-flex align-items-center badge-btn badge bg-primary">GI</button>
+                              <button type="button" title="VE" class="d-flex align-items-center badge-btn badge bg-secondary">VE</button>
+                              <button type="button" title="SA" class="d-flex align-items-center badge-btn badge bg-primary">SA</button>
+                              <button type="button" title="DO" class="d-flex align-items-center badge-btn badge bg-primary">DO</button>
+                            </div>
+                          </div>
+                          <div class="schedule-box">
+                            <span class="schedule-box-title">Orari</span>
+                            <div class="schedule-box-content schedule-times">
+                              <span class="text-primary">Dalle</span>
+                              <input type="time" id="da" name="da" />
+                              <span class="text-primary">Alle</span>
+                              <input type="time" id="a" name="a" />
+                            </div>
+                          </div>
+                          <div class="schedule-box schedule-days">
+                            <span class="schedule-box-title">Loop</span>
+                            <div class="schedule-box-content">
+                              <label class="toggle-switch">
+                                <input type="checkbox" />
+                                <div class="toggle-switch-background">
+                                  <div class="toggle-switch-handle"></div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="schedule-box">
+                            <span class="schedule-box-title">&nbsp;</span>
+                            <div class="schedule-box-content schedule-actions">
+                              <button id="delete-activity-schedule" class="btn icon-btn text-primary" type="button" title="Cancella programmazione">
+                                <i class="fa fa-trash"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button id="add-activity-schedule" title="Aggiungi nuova programmazione" type="button" class="mt-2 btn btn-primary">
+                        Aggiungi nuova programmazione <i class="fa fa-add"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex">
+                <div class="card flex-fill">
+                  <div class="card-body">
+                    <h4 class="text-primary fw-bold">Task attività</h4>
+                    <div class="mt-4">
+                      <div class="row">
+                        <div class="mb-4">
+                          Seleziona applicazione
+                          <div class="btn-group">
+                            <button class="btn btn-primary btn-sm" type="button">Screening</button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">applicazione 1</a></li>
+                              <li><a class="dropdown-item" href="#">applicazione 2</a></li>
+                              <li><a class="dropdown-item" href="#">applicazione 3</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="tasks" id="tasks">
+                          <div class="task">
+                            <div class="task-robot">
+                              <div class="robot-avatar primary">
+                                <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                              </div>
+                            </div>
+                            <div class="task-detail">
+                              <div>Trasporto da <span class="text-primary fw-bold">Controllo</span> a <span class="text-primary fw-bold">Check-in</span></div>
+                              <div class="text-muted">Mario robot - Laboratorio analisi</div>
+                            </div>
+                            <div class="task-actions">
+                              <button type="button" class="text-primary icon-btn btn btn-sm"><i class="fa fa-search"></i></button>
+                              <button type="button" class="text-primary icon-btn btn btn-sm"><i class="fa fa-trash"></i></button>
+                            </div>
+                          </div>
+                          <div class="task">
+                            <div class="task-robot">
+                              <div class="robot-avatar primary">
+                                <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                              </div>
+                            </div>
+                            <div class="task-detail">
+                              <div>Trasporto da <span class="text-primary fw-bold">Controllo</span> a <span class="text-primary fw-bold">Check-in</span></div>
+                              <div class="text-muted">Mario robot - Laboratorio analisiaaaaaaaaaaa</div>
+                            </div>
+                            <div class="task-actions">
+                              <button type="button" class="text-primary icon-btn btn btn-sm"><i class="fa fa-search"></i></button>
+                              <button type="button" class="text-primary icon-btn btn btn-sm"><i class="fa fa-trash"></i></button>
+                            </div>
+                          </div>
+                          <div class="task">
+                            <div class="task-robot">
+                              <div class="robot-avatar primary">
+                                <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                              </div>
+                            </div>
+                            <div class="task-detail">
+                              <div>Trasporto da <span class="text-primary fw-bold">Controllo</span> a <span class="text-primary fw-bold">Check-in</span></div>
+                              <div class="text-muted">Mario robot - Laboratorio analisi</div>
+                            </div>
+                            <div class="task-actions">
+                              <button type="button" class="text-primary icon-btn btn btn-sm"><i class="fa fa-search"></i></button>
+                              <button type="button" class="text-primary icon-btn btn btn-sm"><i class="fa fa-trash"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button id="add-activity-task" title="Aggiungi nuovo task" type="button" class="mt-2 btn btn-primary">
+                        Aggiungi nuovo task <i class="fa fa-add"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </main>
       </div>

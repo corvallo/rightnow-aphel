@@ -29,7 +29,9 @@ $(document).ready(() => {
           let html = ``;
           data.giorni.forEach(
             (g) =>
-              (html = `${html} <div class="d-flex align-items-center badge ${Object.values(g)[0] ? "bg-primary" : "bg-secondary"}">${Object.keys(g)[0]}</div>`)
+              (html = `${html} <button type="button" title="${Object.keys(g)[0]}" class="d-flex align-items-center badge badge-btn ${
+                Object.values(g)[0] ? "bg-primary" : "bg-secondary"
+              }">${Object.keys(g)[0]}</button>`)
           );
 
           return ` 
