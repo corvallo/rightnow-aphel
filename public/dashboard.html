@@ -69,10 +69,9 @@
                   <a href="#subapps" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
                     <span class="align-middle">Applicazioni</span>
                   </a>
-                  <ul id="subapps" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#apps">
-                    <li class="sidebar-item"><a class="sidebar-link" href="./screening.html">Screening</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 2</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 3</a></li>
+                  <ul id="subapps" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#apps">              
+                    <li class="sidebar-item lvl2"><a class="sidebar-link" href="#">Applicazione 2.1</a></li>
+                    <li class="sidebar-item lvl2"><a class="sidebar-link" href="#">Applicazione 2.2</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-item"><a class="sidebar-link" href="#">Applicazione 3</a></li>
@@ -142,7 +141,7 @@
           <div class="container-fluid p-0">
             <div class="d-flex justify-content-between align-items-center mb-2">
               <h1 class="h1 mb-3 text-primary"><strong>Dashboard</strong></h1>
-              <button type="button" title="Filtra" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-filter"></i></button>
+              <button type="button" title="Filtra" class="btn icon-btn text-primary btn-sm"><i class="fa-solid fa-filter"></i></button>
             </div>
             <div class="row">
               <div class="col-12">
@@ -150,6 +149,27 @@
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   <div class="alert-message">
                     <h4 class="alert-heading">Warning alert</h4>
+                    <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content</p>
+                  </div>
+                </div>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <div class="alert-message">
+                    <h4 class="alert-heading">Danger alert</h4>
+                    <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content</p>
+                  </div>
+                </div>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <div class="alert-message">
+                    <h4 class="alert-heading">Success alert</h4>
+                    <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content</p>
+                  </div>
+                </div>
+                <div class="alert alert-info alert-dismissible" role="alert">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <div class="alert-message">
+                    <h4 class="alert-heading">Info alert</h4>
                     <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content</p>
                   </div>
                 </div>
@@ -288,7 +308,7 @@
                       <span class="text-muted">Non ci sono attività in esecuzione</span>
                     </div>
                     <button type="button" class="btn btn-primary">Avvia nuova attività</button>
-                    <div class="w-100 mb-4 mt-4"></div>
+                    <div class="w-100 mb-5 mt-5"></div>
                     <div class="mb-4">
                       <h5 class="card-title mb-0 text-primary">Attività odierne in esecuzione</h5>
                       <div class="table-responsive mt-3">

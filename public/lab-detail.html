@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
 
-    <title>Utenti | Aphel Dashboard</title>
+    <title>Dettaglio Laboratorio | Aphel Dashboard</title>
 
     <link href="css/app.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -23,7 +23,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -69,7 +68,7 @@
                   <a href="#subapps" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
                     <span class="align-middle">Applicazioni</span>
                   </a>
-                  <ul id="subapps" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#apps">              
+                  <ul id="subapps" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#apps">
                     <li class="sidebar-item lvl2"><a class="sidebar-link" href="#">Applicazione 2.1</a></li>
                     <li class="sidebar-item lvl2"><a class="sidebar-link" href="#">Applicazione 2.2</a></li>
                   </ul>
@@ -105,7 +104,7 @@
           <div class="navbar-collapse collapse">
             <div class="navbar-nav navbar-align align-items-center gap-3">
               <div class="d-flex align-items-center gap-2">
-                <span class="fs-xs"> Stai visualizzando i dati di </span>
+                <span class="fs-7"> Stai visualizzando i dati di </span>
                 <div class="btn-group">
                   <button class="btn btn-primary btn-sm" type="button">Nome struttura</button>
                   <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -137,38 +136,96 @@
           </div>
         </nav>
         <!-- END NAVBAR -->
-        <main class="content content-fixed"">
+        <main class="content content-fixed">
           <div class="container-fluid p-0">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <h1 class="h1 mb-3 text-primary"><strong>Utenti</strong></h1>
-              <button id="add-user" type="button" class="btn btn-primary btn-small d-flex gap-2 align-items-center" title="Nuovo utente">
-                Aggiungi nuovo <i class="fa-solid fa-plus"></i>
+            <div class="d-flex align-items-center mb-2 gap-3">
+              <button class="btn btn-primary icon-btn rounded-circle px-2"><i class="fa fa-chevron-left"></i></button>
+              <h1 class="h1 mb-0 text-primary"><strong>Dettaglio laboratorio - Screening neonatale</strong></h1>
+              <button id="remove-user" type="button" class="btn btn-danger btn-sm d-flex gap-2 align-items-center rounded-3" title="Nuovo utente">
+                <i class="fa-solid fa-trash"></i> Elimina
               </button>
             </div>
 
-            <div class="row">
-              <div class="col-12 d-flex">
+            <div class="row mt-3">
+              <div class="col-md-8 col-sm-12 d-flex">
                 <div class="card flex-fill">
                   <div class="card-body">
-                    <div class="page-utilities">
-                      <div class="page-utility">
-                        <input type="text" class="form-control" id="search" placeholder="Cerca..." />
+                    <h4 class="text-primary fw-bold mb-3">Informazioni stuttura</h4>
+                    <form>
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="mb-3 row">
+                            <label class="col-form-label col-sm-3 text-primary fs-6">Nome laboratorio</label>
+                            <div class="col-sm-9">
+                              <div class="input-group has-validation">
+                                <input
+                                  class="form-control"
+                                  type="text"
+                                  name="laboratorio"
+                                  placeholder="Laboratorio"
+                                  id="laboratorio"
+                                  aria-describedby="validationLaboratorio"
+                                  required
+                                />
+
+                                <div id="validationLaboratorio" class="invalid-feedback">Laboratorio obbligatorio</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-3 row">
+                            <label class="col-form-label col-sm-3 text-primary fs-6">Struttura</label>
+                            <div class="col-sm-9">
+                              <div class="input-group has-validation">
+                                <input
+                                  class="form-control"
+                                  type="text"
+                                  name="struttura"
+                                  placeholder="Struttura"
+                                  id="struttura"
+                                  aria-describedby="validationStruttura"
+                                  required
+                                />
+
+                                <div id="validationStruttura" class="invalid-feedback">Struttura obbligatorio</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="page-utility">
-                        <select class="form-select" aria-label="Utenti" data-trigger name="choices-users" id="choices-users">
-                          <option selected>Tutti gli utenti</option>
-                          <option value="1">Utente 1</option>
-                          <option value="2">Utente 2</option>
-                          <option value="3">Utente 3</option>
-                        </select>
+                      <div class="d-flex mt-3 gap-3 justify-content-center">
+                        <button type="button" class="btn btn-primary" disabled>Annulla</button>
+                        <button type="button" class="btn btn-primary">Salva</button>
                       </div>
-                      <div class="page-utility">
-                        <select class="form-select" aria-label="Laboratori" data-trigger name="choices-labs" id="choices-labs">
-                          <option selected>Tutti i laboratori</option>
-                          <option value="1">Laboratorio 1</option>
-                          <option value="2">Laboratorio 2</option>
-                          <option value="3">Laboratorio 3</option>
-                        </select>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div class="card flex-fill card-dark">
+                  <div class="card-body">
+                    <h4 class="text-light">Lab Manager</h4>
+                    <div class="d-flex mt-3 flex-column gap-3">
+                      <div class="d-flex gap-5 align-items-center">
+                        <div class="flex-grow-1">
+                          <span class="text-white text-decoration-underline">Prof.ssa Simona Simonetti</span>
+                        </div>
+                      </div>
+                    </div>
+                    <h4 class="text-light mt-2">Lab User</h4>
+                    <div class="d-flex mt-3 flex-column gap-3">
+                      <div class="d-flex flex-column">
+                        <div class="flex-grow-1">
+                          <span class="text-white text-decoration-underline">Prof.ssa Simona Simonetti</span>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="text-white text-decoration-underline">Prof.ssa Simona Simonetti</span>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="text-white text-decoration-underline">Prof.ssa Simona Simonetti</span>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="text-white text-decoration-underline">Prof.ssa Simona Simonetti</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -178,27 +235,40 @@
 
             <div class="row">
               <div class="col-12 d-flex">
-                <div class="card flex-fill">
-                  <div class="card-body">
-                    <div class="mb-4">
-                      <div class="row">
-                        <div class="table-responsive">
-                          <table id="users" class="display responsive nowrap" cellspacing="0" width="100%">
-                            <thead>
-                              <tr>
-                                <th>Cognome</th>
-                                <th>Nome</th>
-                                <th>Titolo</th>
-                                <th>Email</th>
-                                <th>Ruolo</th>
-                                <th>Telefono</th>
-                                <th>Struttura</th>
-                                <th>Laboratorio</th>
-                                <th>Azioni</th>
-                              </tr>
-                            </thead>
-                            <tbody></tbody>
-                          </table>
+                <div class="w-100 mb-4 mt-4">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="robotstatus light">
+                        <div class="robotstatus-header">
+                          <h5 class="robotstatus-title mb-4">Robot assegnati al laboratorio</h5>
+                        </div>
+                        <div class="robotslist mb-1 mt-2">
+                          <div class="robot">
+                            <div class="robot-avatar success">
+                              <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+                            </div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                          <div class="robot">
+                            <div class="robot-avatar danger"><img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" /></div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
+                          <div class="robot">
+                            <div class="robot-avatar success"><img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" /></div>
+                            <div class="robot-info">
+                              <h6 class="robot-title mb-0">Helios</h6>
+                              <div class="robot-name">Mario Robot</div>
+                              <div class="robot-location">Laboratorio xyz</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

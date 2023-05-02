@@ -1,6 +1,3 @@
-// rotating + flipping icons
-// -------------------------
-
 .#{$fa-css-prefix}-rotate-90 {
   transform: rotate(90deg);
 }
@@ -22,7 +19,7 @@
 }
 
 .#{$fa-css-prefix}-flip-both,
-.#{$fa-css-prefix}-flip-horizontal.#{$fa-css-prefix}-flip-vertical { 
+.#{$fa-css-prefix}-flip-horizontal.#{$fa-css-prefix}-flip-vertical {
   transform: scale(-1, -1);
 }
 

@@ -55,7 +55,7 @@ a.sidebar-link {
     margin-right: 0.75rem;
     width: 20px;
     text-align: center;
-    color: $sidebar-link-icon-color;
+    color: $white;
   }
 }
 
@@ -69,7 +69,7 @@ a.sidebar-link {
 
   i,
   svg {
-    color: $sidebar-link-icon-hover-color;
+    color: $white;
   }
 }
 
@@ -177,9 +177,11 @@ a.sidebar-link {
   .sidebar-link {
     background: transparent;
     border-left: 0;
-    color: $gray-300;
     font-size: 90%;
     font-weight: 400;
     padding: 0.625rem 1.5rem 0.625rem 3.25rem;
+  }
+  .sidebar-item .lvl2 {
+    margin-left: 10px;
   }
 }

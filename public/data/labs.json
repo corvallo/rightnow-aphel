@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "nome": "Laboratorio analisi",
+            "manager": "Prof.ssa Simona Simonetti",
+            "stato": "Attivo",
+            "robot": [
+                {
+                    "nome": "Mario Robot",
+                    "img": "img/robot.png"
+                },
+                {
+                    "nome": "Andrea Robot",
+                    "img": "img/robot.png"
+                }
+            ]
+        },
+        {
+            "nome": "Laboratorio analisi",
+            "manager": "Prof.ssa Simona Simonetti",
+            "stato": "Non Attivo",
+            "robot": [
+                {
+                    "nome": "Mario Robot",
+                    "img": "img/robot.png"
+                },
+                {
+                    "nome": "Andrea Robot",
+                    "img": "img/robot.png"
+                }
+            ]
+        }
+    ]
+}
