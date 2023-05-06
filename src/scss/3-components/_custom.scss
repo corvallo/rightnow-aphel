@@ -474,3 +474,21 @@ input[type="time"] {
 .value {
   width: 40px;
 }
+
+input[type="search"].choices__input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"].choices__input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the ‘X’ from Chrome */
+input[type="search"].choices__input::-webkit-search-decoration,
+input[type="search"].choices__input::-webkit-search-cancel-button,
+input[type="search"].choices__input::-webkit-search-results-button,
+input[type="search"].choices__input::-webkit-search-results-decoration {
+  display: none;
+}
