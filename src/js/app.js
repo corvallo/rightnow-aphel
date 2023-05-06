@@ -47,13 +47,14 @@ $(document).ready(() => {
     lengthChange: false,
   });
 
-  $("#labs").DataTable({
+  $("#labs-detail").DataTable({
     ajax: "./data/labs.json",
     responsive: true,
     paging: false,
     info: false,
     searching: false,
     lengthChange: false,
+
     language: {
       info: "Pagina _PAGE_ di _PAGES_",
       paginate: {

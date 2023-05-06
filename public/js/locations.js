@@ -1,9 +1,3 @@
-import $ from "jquery";
-import DataTable from "datatables.net-responsive";
-import Choices from "choices.js";
-
-window.$ = $;
-
 $(document).ready(() => {
   new Choices("#choices-locations", { itemSelectText: "" });
 
@@ -46,14 +40,14 @@ $(document).ready(() => {
         targets: 1,
         data: null,
         defaultContent: `
-        <div class="d-flex flex-fill align-items-center gap-3">
-            <button class="btn btn-ligth text-primary icon-btn" type="button" title="Dettagli">
-                <i class="fa fa-search"></i>
-            </button>
-            <button class="btn btn-ligth text-primary icon-btn" type="button" title="Cancella"><i class="fa fa-trash"></i></button>
-           
-        </div>
-        `,
+          <div class="d-flex flex-fill align-items-center gap-3">
+              <button class="btn btn-ligth text-primary icon-btn" type="button" title="Dettagli">
+                  <i class="fa fa-search"></i>
+              </button>
+              <button class="btn btn-ligth text-primary icon-btn" type="button" title="Cancella"><i class="fa fa-trash"></i></button>
+             
+          </div>
+          `,
       },
     ],
   });

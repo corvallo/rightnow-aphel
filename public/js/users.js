@@ -1,15 +1,9 @@
-import $ from "jquery";
-import DataTable from "datatables.net-responsive";
-import Choices from "choices.js";
-
-window.$ = $;
-
 $(document).ready(() => {
-  new Choices("#choices-locations", { itemSelectText: "" });
-
-  $("#locations").DataTable({
+  new Choices("#choices-users", { itemSelectText: "" });
+  new Choices("#choices-labs", { itemSelectText: "" });
+  $("#users").DataTable({
     responsive: true,
-    ajax: "./data/locations.json",
+    ajax: "./data/user.json",
     paging: true,
     searching: false,
     lengthChange: false,
@@ -22,26 +16,16 @@ $(document).ready(() => {
         previous: "Pagina precedente",
       },
     },
+
     columns: [
+      { data: "cognome" },
       { data: "nome" },
-      { data: "citta" },
-      {
-        data: "responsabili",
-        render: (data) => {
-          let html = ``;
-          data.split(",").forEach((d) => (html = `${html} <div>${d}</div>`));
-          return html;
-        },
-      },
-      {
-        data: "laboratori",
-        render: (data) => {
-          let html = ``;
-          data.split(",").forEach((d) => (html = `${html} <div>- ${d}</div>`));
-          return html;
-        },
-      },
-      { data: "robot" },
+      { data: "titolo" },
+      { data: "email" },
+      { data: "ruolo" },
+      { data: "telefono" },
+      { data: "struttura" },
+      { data: "laboratorio" },
       {
         targets: 1,
         data: null,
@@ -51,7 +35,12 @@ $(document).ready(() => {
                 <i class="fa fa-search"></i>
             </button>
             <button class="btn btn-ligth text-primary icon-btn" type="button" title="Cancella"><i class="fa fa-trash"></i></button>
-           
+            <label class="toggle-switch">
+                <input type="checkbox">
+                <div class="toggle-switch-background">
+                    <div class="toggle-switch-handle"></div>
+                </div>
+            </label>
         </div>
         `,
       },

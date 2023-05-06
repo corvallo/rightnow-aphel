@@ -15,14 +15,23 @@
 
     <title>Dettaglio Attività | Aphel Dashboard</title>
 
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/activity-detail.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link href="css/app.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -104,7 +113,7 @@
           <div class="navbar-collapse collapse">
             <div class="navbar-nav navbar-align align-items-center gap-3">
               <div class="d-flex align-items-center gap-2">
-                <span class="fs-7"> Stai visualizzando i dati di </span>
+                <span class="fs-xs"> Stai visualizzando i dati di </span>
                 <div class="btn-group">
                   <button class="btn btn-primary btn-sm" type="button">Nome struttura</button>
                   <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -139,7 +148,7 @@
         <main class="content content-fixed">
           <div class="container-fluid p-0">
             <div class="d-flex align-items-center mb-2 gap-3">
-              <button class="btn btn-primary icon-btn rounded-circle px-2"><i class="fa fa-chevron-left"></i></button>
+              <button class="btn btn-circle rounded-circle"><i class="fa fa-chevron-left"></i></button>
               <h1 class="h1 mb-0 text-primary"><strong>Dettaglio attività - Trasporto e strappo con Hermes</strong></h1>
               <button id="remove-user" type="button" class="btn btn-danger btn-sm d-flex gap-2 align-items-center rounded-3" title="Elimina">
                 <i class="fa-solid fa-trash"></i> Elimina
@@ -262,7 +271,12 @@
                           <div class="schedule-box">
                             <span class="schedule-box-title">&nbsp;</span>
                             <div class="schedule-box-content schedule-actions">
-                              <button id="delete-activity-schedule" class="btn icon-btn text-primary" type="button" title="Cancella programmazione">
+                              <button
+                                id="delete-activity-schedule delete-activity-schedule"
+                                class="btn icon-btn text-primary"
+                                type="button"
+                                title="Cancella programmazione"
+                              >
                                 <i class="fa fa-trash"></i>
                               </button>
                             </div>
@@ -364,6 +378,5 @@
       </div>
       <!-- END MAIN -->
     </div>
-    <script src="js/app.js"></script>
   </body>
 </html>
