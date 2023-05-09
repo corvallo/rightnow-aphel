@@ -7,11 +7,11 @@
             "robot": [
                 {
                     "nome": "Mario Robot",
-                    "img": "img/robot.png"
+                    "img": "img/hermes.png"
                 },
                 {
                     "nome": "Andrea Robot",
-                    "img": "img/robot.png"
+                    "img": "img/kronos.png"
                 }
             ]
         },
@@ -22,11 +22,11 @@
             "robot": [
                 {
                     "nome": "Mario Robot",
-                    "img": "img/robot.png"
+                    "img": "img/hermes.png"
                 },
                 {
                     "nome": "Andrea Robot",
-                    "img": "img/robot.png"
+                    "img": "img/kronos.png"
                 }
             ]
         }

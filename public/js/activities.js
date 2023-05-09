@@ -49,7 +49,7 @@ $(document).ready(() => {
             htmlImg = `
                     ${htmlImg}                
                     <div class="robot-avatar small primary">
-                     <img src="./img/robot.png" title="${robot.nome}" alt="${robot.nome}" />
+                     <img src="./img/kronos.png" title="${robot.nome}" alt="${robot.nome}" />
                     </div>
                 `;
             html = `${html} <div class="text-muted">${robot.nome} - ${robot.laboratorio}</div>`;

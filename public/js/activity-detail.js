@@ -68,7 +68,7 @@ $(document).ready(() => {
     <div class="task">
       <div class="task-robot">
         <div class="robot-avatar primary">
-          <img src="./img/robot.png" title="Mario Robot" alt="Mario Robot" />
+          <img src="./img/kronos.png" title="Mario Robot" alt="Mario Robot" />
         </div>
       </div>
       <div class="task-detail">

@@ -64,7 +64,7 @@ a.sidebar-link {
 }
 
 .sidebar-link:hover {
-  color: $sidebar-link-hover-color;
+  color: $white;
   background: $sidebar-link-hover-bg;
 
   i,
@@ -75,7 +75,7 @@ a.sidebar-link {
 
 .sidebar-item.active > .sidebar-link,
 .sidebar-item.active .sidebar-link:hover {
-  color: $sidebar-link-active-color;
+  color: $white;
   background: $sidebar-link-active-bg;
 
   i,

@@ -34,12 +34,12 @@
                 {
                     "nome": "Mario Robot",
                     "laboratorio": "Laboratorio 123",
-                    "img": "img/robot.png"
+                    "img": "img/kronos.png"
                 },
                 {
                     "nome": "Andrea Robot",
                     "laboratorio": "Laboratorio 123",
-                    "img": "img/robot.png"
+                    "img": "img/hermes.png"
                 }
             ]
         },
@@ -77,12 +77,12 @@
                 {
                     "nome": "Mario Robot",
                     "laboratorio": "Laboratorio 123",
-                    "img": "img/robot.png"
+                    "img": "img/kronos.png"
                 },
                 {
                     "nome": "Andrea Robot",
                     "laboratorio": "Laboratorio 123",
-                    "img": "img/robot.png"
+                    "img": "img/hermes.png"
                 }
             ]
         },
@@ -120,12 +120,12 @@
                 {
                     "nome": "Mario Robot",
                     "laboratorio": "Laboratorio 123",
-                    "img": "img/robot.png"
+                    "img": "img/kronos.png"
                 },
                 {
                     "nome": "Andrea Robot",
                     "laboratorio": "Laboratorio 123",
-                    "img": "img/robot.png"
+                    "img": "img/hermes.png"
                 }
             ]
         }
